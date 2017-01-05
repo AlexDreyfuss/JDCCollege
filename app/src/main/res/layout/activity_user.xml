@@ -10,45 +10,43 @@ android:paddingRight="@dimen/activity_horizontal_margin"
 android:paddingTop="@dimen/activity_vertical_margin"
 tools:context="com.hackathon.jdccollege.model.UserActivity">
 
-    <TextView
-        android:text="TextView"
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/textView"
-        tools:text="הי! אני מ... "
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/textView1"
-        tools:text="אני רןצה ללמוד..."
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="105dp" />
+        <TextView
+            android:text="I'm want study"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="36sp" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/textView3"
-        tools:text="החלום שלנו הוא ללמוד ב..."
-        android:layout_below="@+id/textView1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="66dp" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/spinner" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/textView2"
-        tools:text="ב... "
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="28dp" />
+        <TextView
+            android:text="In the area of"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="36sp" />
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/spinner2" />
 
+        <Button
+            android:text="Next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button"
+            android:textSize="36sp" />
+    </LinearLayout>
 </RelativeLayout>

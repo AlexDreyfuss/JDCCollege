@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">JDCCollege</string>
+
+    <string-array name="categories_array">
+        <item>Computer Science</item>
+        <item>Art</item>
+        <item>etc</item>
+    </string-array>
+
+    <string-array name="areas_array">
+        <item>All of Israel</item>
+        <item>Jerusalem</item>
+        <item>Tel Aviv</item>
+        <item>North</item>
+        <item>South</item>
+    </string-array>
 </resources>
