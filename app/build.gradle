@@ -32,5 +32,6 @@ dependencies {
     compile 'com.android.support:design:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile files('libs/mongodb-driver-3.4.1.jar')
-    compile files('libs/mongo-java-driver-3.0.0.jar')
+    compile files('libs/mongodb-driver-core-3.4.1.jar')
+    compile files('libs/bson-3.4.1.jar')
 }

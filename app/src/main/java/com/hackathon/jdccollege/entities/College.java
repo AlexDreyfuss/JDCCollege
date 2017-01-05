@@ -58,11 +58,23 @@ public class College {
     private String Phone;
     private String Address;
 
-    public College(String id, String name, String web_site, String phone, String address) {
+    public String getTown() {
+        return Town;
+    }
+
+    public void setTown(String town) {
+        Town = town;
+    }
+
+    private String Town;
+
+    public College(String id, String name, String web_site, String phone, String address,String town) {
         ID = id;
         Name = name;
         Web_Site = web_site;
         Phone = phone;
         Address = address;
+        Town= town;
+
     }
 }

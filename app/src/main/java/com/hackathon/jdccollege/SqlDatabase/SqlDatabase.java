@@ -4,7 +4,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -47,47 +49,58 @@ public class SqlDatabase {
 
     public DB db = null;
     SqlDatabase(){
-        try {
-            MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://jdchackathon:XD8JRBOtiK5ITaSEm95eeNCnG2R21qtJkM1Z9Wm6Qor46U218dYuWW4hmI6tPJd3c6x273dZHv3xK0F1AKEYKA==@jdchackathon.documents.azure.com:10250/?ssl=true&sslInvalidHostNameAllowed=true"));
-
-            db = mongoClient.getDB( "JCTHack" );
-
-        }
-        catch (Exception ex){
-            Log.d("problem", ex.toString());
-        }
-
-
-    }
-
-    //region Interface Functions
-
-
-
-
-    public ArrayList<College> getCollegeList() throws Exception {
-//        MatrixCursor accountCursor = new MatrixCursor(new String[]{Account.ID,Account.USERNAME,Account.PASSWORD });
-
-//        for (int i =0; i < accountList.size();i++){
-//            acc = accountList.get(i);
-//            accountCursor.addRow(new Object[]{acc.getAccountNumber(),acc.getUserName(),acc.getPassword()});
-//        }
-//        return accountCursor;
-//        MatrixCursor agenciesCursor = new MatrixCursor(new String[]{"_ID", "Name", "Country", "City", "Street", "HouseNumber", "PhoneNumber", "Email"});
+//        try {
+////            MongoClient mongoClient =null;
+////            AsyncTask<Void,Void,MongoClient> as = new AsyncTask<Void, Void, MongoClient>() {
+////                @Override
+////                protected MongoClient doInBackground(Void... params) {
+////
+////                    return mongoClient;
+////                }
+////            };
+////            as.execute();
+//            MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://jdchackathon:XD8JRBOtiK5ITaSEm95eeNCnG2R21qtJkM1Z9Wm6Qor46U218dYuWW4hmI6tPJd3c6x273dZHv3xK0F1AKEYKA==@jdchackathon.documents.azure.com:10250/?ssl=true&sslInvalidHostNameAllowed=true"));
 //
-       ArrayList<College> collegelist = new ArrayList<>();
-        DBCollection coll = db.getCollection(Constraints.getcollege);
-        DBCursor cursor = coll.find();
-        List<DBObject> l = cursor.toArray();
+//         //   mongoClient = as.get();
+//            db = mongoClient.getDB( "JCTHack" );
+//
+//
+//        }
+//        catch (Exception ex){
+//            Log.d("problem", ex.toString());
+//        }
 
-        for(int i=0; i < l.size();i++ ){
-            collegelist.add(new College(l.get(i).get(College.kid).toString(),l.get(i).get(College.kname).toString(),
-                    l.get(i).get(College.kwebsite).toString(),l.get(i).get(College.kphone).toString(),l.get(i).get(College.kadress).toString()));
-        }
 
-
-            return collegelist;
     }
+
+//    //region Interface Functions
+
+
+
+
+//    public ArrayList<College> getCollegeList() throws Exception {
+////        MatrixCursor accountCursor = new MatrixCursor(new String[]{Account.ID,Account.USERNAME,Account.PASSWORD });
+//
+////        for (int i =0; i < accountList.size();i++){
+////            acc = accountList.get(i);
+////            accountCursor.addRow(new Object[]{acc.getAccountNumber(),acc.getUserName(),acc.getPassword()});
+////        }
+////        return accountCursor;
+////        MatrixCursor agenciesCursor = new MatrixCursor(new String[]{"_ID", "Name", "Country", "City", "Street", "HouseNumber", "PhoneNumber", "Email"});
+////
+//       ArrayList<College> collegelist = new ArrayList<>();
+//        DBCollection coll = db.getCollection(Constraints.getcollege);
+//        DBCursor cursor = coll.find();
+//        List<DBObject> l = cursor.toArray();
+//
+//        for(int i=0; i < l.size();i++ ){
+//            collegelist.add(new College(l.get(i).get(College.kid).toString(),l.get(i).get(College.kname).toString(),
+//                    l.get(i).get(College.kwebsite).toString(),l.get(i).get(College.kphone).toString(),l.get(i).get(College.kadress).toString()));
+//        }
+//
+//
+//            return collegelist;
+//    }
 
 
 //    public ArrayList<College> getAccountList() {

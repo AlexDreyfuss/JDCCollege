@@ -12,14 +12,6 @@ public class Course {
     public static final String kcertification="certification";
     public static final String kduration=        "duration";
     public static final String kperiod="period";
-    public static final String kdays_of_the_week=        "days_of_the_week" ;
-    public static final String ksunday=    "1" ;
-    public static final String kmonday=            "2" ;
-    public static final String ktueday=            "3" ;
-    public static final String kwednesday=            "4" ;
-    public static final String kthursday=            "5";
-    public static final String kfriday=            "6" ;
-    public static final String ksaturday=            "7" ;
     public static final String k_price=        "price";
     public static final String kdescription="description" ;
 
@@ -71,21 +63,8 @@ public class Course {
         this.rezifut = rezifut;
     }
 
-    public String getPeriod() {
-        return period;
-    }
 
-    public void setPeriod(String period) {
-        this.period = period;
-    }
 
-    public String getDaysofweek() {
-        return daysofweek;
-    }
-
-    public void setDaysofweek(String daysofweek) {
-        this.daysofweek = daysofweek;
-    }
 
     public String getPrice() {
         return price;
@@ -125,25 +104,23 @@ public class Course {
    private String teuda;
    private String duration;
    private String rezifut;
-   private String period;
-   private String daysofweek;
+
+
    private String price;
    private String description;
    private String preCourses;
    private String area;
 
     public Course(String id, String name, String collegeId, String teuda,
-                  String duration, String rezifut, String period, String
-                          daysofweek, String price, String description,
+                  String duration, String rezifut, String price, String description,
                   String preCourses, String area) {
         this.id = id;
-        this.name = name;
         this.collegeId = collegeId;
+
         this.teuda = teuda;
         this.duration = duration;
         this.rezifut = rezifut;
-        this.period = period;
-        this.daysofweek = daysofweek;
+        this.name = name;
         this.price = price;
         this.description = description;
         this.preCourses = preCourses;
